@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单文件上传</title>
+</head>
+<body>
+    <h2>单文件上传</h2>
+    <hr>
+{#    enctype="multipart/form-data" 是为了支持文件上传  #}
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>用户名: <input type="text" name="uname"></p>
+        <p>请选择要上传的照片: <input type="file" name="imgs" multiple></p>
+        <p><button>上传图片</button></p>
+    </form>
+</body>
+</html>

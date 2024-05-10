@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>jinja2模板语言</h2>
+    <hr>
+    
+    <p>{{ name }}</p>
+    {% for foo in name %}
+        <b>{{ foo }}</b>
+    {% endfor %}
+    <hr>
+
+    {% for foo in name %}
+        <div>{{ loop.index }}:{{ foo }}</div>
+    {% endfor %}
+    <hr>
+
+    {% for foo in range(1, 4) %}
+        <div>{{ foo }}</div>
+    {% endfor %}
+    
+
+    {#  jinja2是可以使用函数调用  #}
+    
+    
+</body>
+</html>

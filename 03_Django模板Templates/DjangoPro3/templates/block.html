@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+{#    css   #}
+    {% block extcss %}
+    {% endblock %}
+</head>
+<body>
+
+    <h2>父模板</h2>
+    <hr>
+    
+    {% block head %}
+    {% endblock %}
+    <hr>
+    
+    {% block content %}
+        <button>我是content父模板中的内容按钮</button>
+    {% endblock %}
+    <hr>
+    
+    {% block foot %}
+    {% endblock %}
+    <hr>
+{#    js   #}
+    {% block extjs %}
+    {% endblock %}
+    <hr>
+</body>
+</html>

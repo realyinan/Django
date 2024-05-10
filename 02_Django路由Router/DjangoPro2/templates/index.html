@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>首页</h2>
+    <hr>
+
+    {#  url路由  #}
+    <a href="/user/userlist/">url路由的方式: 进入用户列表页面</a>
+    <hr>
+    
+    {#  反向解析  #}
+    {# userlist 是path路由的name值 #}
+{#    <a href="{% url 'userlist' %}">反向解析的方式: 进入用户列表页面</a>#}
+{#    <hr>#}
+
+    {# 反向解析: 带命名空间 #}
+    <a href="{% url 'App:userlist' %}">反向解析带命名空间的方式: 进入用户列表页面</a>
+    
+</body>
+</html>

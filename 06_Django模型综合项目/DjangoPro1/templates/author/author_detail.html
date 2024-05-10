@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作者详情</title>
+</head>
+<body>
+    <h2>作者详情</h2>
+    <hr>
+    
+    <p>作者姓名: {{ author.first_name }}{{ author.last_name }}</p>
+    <p>作者邮箱: {{ author.email }}</p>
+    <p>作者性别: {{ author.gender }}</p>
+
+    <h4>我的作品集</h4>
+    <ul>
+        {% for book in author.book_set.all %}
+        	<li>
+                <a href="{% url 'book:detail' book.id %}">
+                    {{ book.title }}
+                </a>
+            </li>
+        {% endfor %}
+        
+    </ul>
+</body>
+</html>

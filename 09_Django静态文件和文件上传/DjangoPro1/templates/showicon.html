@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+</head>
+<body>
+    <h2>显示用户</h2>
+    <hr>
+    <p>用户名: {{ user.name }}</p>
+    <p>头像: <img src="{% static user.icon %}" alt="" width="200"></p>
+    <hr>
+    <h3>{{ user.name }}的相册</h3>
+    {% for photo in user.photomodel_set.all %}
+        <img src="{% static photo.img %}" alt="" width="100">
+    {% endfor %}
+    
+</body>
+</html>

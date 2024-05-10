@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+    <h2>用户列表</h2>
+    <hr>
+    <ul>
+        {# 'users是字典中的key'#}
+        {% for user in users %}
+            <li>
+                {# 反向解析: 路由传参 #}
+                <a href="{% url 'App:userdetail' user.id %}">
+                    {{ user.name }} - {{ user.age }}
+                </a>
+            </li>
+        	
+        {% endfor %}
+        
+    </ul>
+</body>
+</html>

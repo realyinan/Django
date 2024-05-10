@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+         .btns li {
+             display: inline-block;
+             margin: 5px;
+         }
+    </style>
+</head>
+<body>
+    <h2>分页功能</h2>
+    <hr>
+    
+    <ul class="btns">
+        {% for page in pages %}
+            <li>
+            <a href="{% url 'pageinate2' page %}">
+                <button>{{ page }}</button>
+            </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <hr>
+    
+    <ul>
+        {% for person in persons %}
+        	<li>{{ person.name }} - {{ person.age }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
